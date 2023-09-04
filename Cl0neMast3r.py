@@ -56,7 +56,7 @@ class Tool:  # This class is responsible about Tools
 		else:
 			return "Couldn't retrieve the date"
 
-	def clone(self, *path):  # Clone the tool to the path argument
+	def clone(self, path):  # Clone the tool to the path argument
 		print 'Installing: ' + self.name + ': ',
 		if not os.system('git clone -q ' + self.url + ' ' + ('/tmp/' if path else '') + self.name):
 			print green + 'Ok' + end
